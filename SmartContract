@@ -1,10 +1,8 @@
-
-
 /**
  LiL Bean
 
  Telegram : https://t.me/lilbeantoken
- website: 
+ website: https://lilbean.club
 
  */
 // SPDX-License-Identifier: MIT
@@ -685,12 +683,12 @@ contract LiLBean is Context, IBEP20, Ownable, ReentrancyGuard {
     }
     
     function set_maxTxAmount(uint256 maxTxAmount) external onlyOwner {
-        _maxTxAmount = _tTotal.mul(maxTxAmount) * 10 ** _decimals;
+        _maxTxAmount = _tTotal.mul(maxTxAmount) * _decimals;
     }
     
     
     function setNumTokensSellToAddToLiquidity(uint256 swapNumber) external onlyOwner {
-        numTokensSellToAddToLiquidity = swapNumber * 10 ** _decimals;
+        numTokensSellToAddToLiquidity = swapNumber * _decimals;
     }
 
     function setSwapAndLiquifyEnabled(bool _enabled) public onlyOwner {
